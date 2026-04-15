@@ -1,4 +1,4 @@
-# Dental Appointment Management System
+# DentAI Scheduler – AI-Powered Dental Appointment Assistant
 
 An **AI-powered multi-agent system** for managing dental appointments using natural language.  
 Built with **LangGraph + OpenAI**, this project demonstrates real-world agent orchestration, tool execution, and conversational AI.
