@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Project paths
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent  # backend folder
 CSV_PATH = str(BASE_DIR / "doctor_availability.csv")
 
 # OpenAI Config

@@ -95,9 +95,26 @@ def supervisor_node(state: AppointmentState) -> dict:
     ).with_structured_output(SupervisorDecision)
 
     chain = SUPERVISOR_PROMPT | llm
-    decision: SupervisorDecision = chain.invoke({"messages": sanitize_messages(state["messages"])})
 
-    return {
-        "intent": decision.intent,
-        "next_agent": decision.next_agent,
-    }
+    try:
+        decision: SupervisorDecision = chain.invoke({
+            "messages": sanitize_messages(state["messages"])
+        })
+
+        # ✅ Safe extraction
+        intent = getattr(decision, "intent", "unknown")
+        next_agent = getattr(decision, "next_agent", "info_agent")
+
+        return {
+            "intent": intent,
+            "next_agent": next_agent,
+        }
+
+    except Exception as e:
+        # ✅ Fallback to prevent crash
+        print("Supervisor Error:", e)
+
+        return {
+            "intent": "unknown",
+            "next_agent": "info_agent",
+        }

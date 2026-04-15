@@ -913,7 +913,7 @@ date_slot,specialization,doctor_name,is_available,patient_to_attend
 2026-08-08 08:30:00,cosmetic_dentist,jane smith,FALSE,10232303
 2026-08-08 09:00:00,cosmetic_dentist,jane smith,FALSE,10232303
 2026-08-08 09:30:00,cosmetic_dentist,jane smith,FALSE,10232303
-2026-08-08 10:00:00,cosmetic_dentist,jane smith,TRUE,
+2026-08-08 10:00:00,cosmetic_dentist,jane smith,FALSE,10082
 2026-08-08 10:30:00,cosmetic_dentist,jane smith,FALSE,1149973
 2026-08-08 11:00:00,cosmetic_dentist,jane smith,FALSE,10232303
 2026-08-08 11:30:00,cosmetic_dentist,jane smith,FALSE,1149973
@@ -3475,7 +3475,7 @@ date_slot,specialization,doctor_name,is_available,patient_to_attend
 2026-07-08 14:30:00,oral_surgeon,robert martinez,TRUE,
 2026-07-08 15:00:00,oral_surgeon,robert martinez,TRUE,
 2026-07-08 15:30:00,oral_surgeon,robert martinez,TRUE,
-2026-07-08 16:00:00,oral_surgeon,robert martinez,TRUE,
+2026-07-08 16:00:00,oral_surgeon,robert martinez,FALSE,10054
 2026-07-08 16:30:00,oral_surgeon,robert martinez,TRUE,
 2026-08-08 08:00:00,oral_surgeon,robert martinez,TRUE,
 2026-08-08 08:30:00,oral_surgeon,robert martinez,FALSE,1000081

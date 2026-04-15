@@ -1,21 +1,27 @@
-# DentAI Scheduler – AI-Powered Dental Appointment Assistant
+# 🦷 DentAI Scheduler
 
-An **AI-powered multi-agent system** for managing dental appointments using natural language.  
-Built with **LangGraph + OpenAI**, this project demonstrates real-world agent orchestration, tool execution, and conversational AI.
+An AI-powered dental appointment assistant...
 
-## Overview
+An **AI-powered full-stack dental appointment system** that allows users to book, manage, and query appointments using natural language.
 
-This system provides a chat-based interface for patients and clinic staff to:
-- **Check available appointment slots** and doctor information
-- **Book new appointments** with preferred doctors
-- **Cancel existing appointments**
-- **Reschedule appointments** to different time slots
+Built with **LangGraph + OpenAI + FastAPI + React**, this project demonstrates real-world multi-agent orchestration, conversational AI, and modern UI/UX design.
 
-The system uses a supervisor agent that intelligently routes user requests to the appropriate specialized agent based on the detected intent, making it an excellent educational example of multi-agent AI systems.
+---
 
-## Architecture
+## ✨ Features
 
-### Multi-Agent Design
+- 💬 **AI-first Chat Interface**
+- 🤖 **Multi-Agent System** (Supervisor + Specialized Agents)
+- 📅 Book, Cancel, Reschedule appointments via natural language
+- ⚡ Real-time API with FastAPI
+- 🎨 Modern React UI with animations & smart formatting
+- 🧠 Context-aware conversation (chat memory)
+
+---
+
+## 🧠 Architecture
+
+### Multi-Agent Workflow
 
 The system follows a supervisor pattern where a central coordinator analyzes user messages and routes them to the most appropriate specialized agent:
 
@@ -46,6 +52,10 @@ The system follows a supervisor pattern where a central coordinator analyzes use
 - **Booking Agent**: Collects booking details and creates new appointments
 - **Cancellation Agent**: Handles appointment cancellation requests
 - **Rescheduling Agent**: Manages moving appointments to different time slots
+
+
+### Tech Stack
+
 
 - **LangGraph** – Orchestrates the multi-agent workflow and state management  
 - **LangChain** – Provides LLM integration and tool-calling framework  

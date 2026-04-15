@@ -101,7 +101,12 @@ def rescheduling_agent_node(state: AppointmentState) -> dict:
 
     chain = RESCHEDULE_PROMPT | llm
     response = chain.invoke({"messages": sanitize_messages(state["messages"])})
+    if hasattr(response, "content") and response.content:
+        text = response.content
+    else:
+        text = "🤖 Working on your request..."
+
     return {
         "messages": [response],
-        "final_response": response.content if not response.tool_calls else None,
+        "final_response": text,
     }

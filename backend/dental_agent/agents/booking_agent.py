@@ -49,11 +49,15 @@ def booking_agent_node(state: AppointmentState) -> dict:
     llm = ChatOpenAI(
         model=MODEL_NAME,
         temperature=TEMPERATURE,
-    ).bind_tools(BOOKING_TOOLS)
+    )
 
     chain = BOOKING_PROMPT | llm
-    response = chain.invoke({"messages": sanitize_messages(state["messages"])})
+
+    response = chain.invoke({
+        "messages": sanitize_messages(state["messages"])
+    })
+
     return {
         "messages": [response],
-        "final_response": response.content if not response.tool_calls else None,
+        "final_response": response.content,
     }
